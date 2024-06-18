@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import tuongLabGroupPic from "../../public/tuong-lab-group-pic.jpeg";
+import { FaChild } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -95,24 +96,36 @@ const Hero = () => {
 
 const Values = () => {
   return (
-    <div className="h-[80vh] w-full text-neutral-600 flex justify-center bg-neutral-200 border-t border-b border-gray-200">
+    <div className="md:h-[80vh] h-[100vh] w-full text-neutral-600 flex justify-center bg-neutral-200 border-t border-b border-gray-400">
       <div className="flex flex-col justify-center items-center flex-grow container font-light gap-20">
         <h2 className="text-4xl py-8 w-full text-center ">Aims & Values</h2>
 
-        <div className=" flex flex-col items-center gap-20">
-          <h2 className="text-3xl w-[55%] ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae recusandae, minima sit illum nemo natus facilis eaque unde ipsa ex hic facere dignissimos incidunt fugiat aliquam laborum inventore iste saepe.</h2>
-          <ul className="flex justify-between gap-10 w-[70%] ">
-            <li className="text-4xl">
-              <FaGithub size={80} className="cursor-pointer transition-colors duration-150 hover:text-red-400" />
+        <div className=" flex flex-col items-center md:gap-20 gap-3">
+          <h2 className="text-3xl md:w-[55%] w-[85%]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae recusandae, minima sit illum nemo natus facilis eaque unde ipsa ex hic facere dignissimos incidunt fugiat aliquam laborum inventore iste saepe.</h2>
+          <ul className="flex justify-between md:w-[65%] w-[85%]">
+            <li className="flex flex-col items-center justify-center gap-3">
+              <div className="text-4xl rounded-full p-5 shadow-md">
+              <FaChild size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              </div>
+              <p className="text-xl">hello</p>
             </li>
-            <li className="text-4xl">
-              <FaGithub size={80} className="cursor-pointer transition-colors duration-150 hover:text-red-400" />
+            <li className="flex flex-col items-center justify-center gap-3">
+              <div className="text-4xl rounded-full p-5 shadow-md">
+              <FaChild size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              </div>
+              <p className="text-xl">hello</p>
             </li>
-            <li className="text-4xl">
-              <FaGithub size={80} className="cursor-pointer transition-colors duration-150 hover:text-red-400" />
+            <li className="flex flex-col items-center justify-center gap-3">
+              <div className="text-4xl rounded-full p-5 shadow-md">
+              <FaChild size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              </div>
+              <p className="text-xl">hello</p>
             </li>
-            <li className="text-4xl">
-              <FaGithub size={80} className="cursor-pointer transition-colors duration-150 hover:text-red-400" />
+            <li className="flex flex-col items-center justify-center gap-3">
+              <div className="text-4xl rounded-full p-5 shadow-md">
+              <FaChild size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              </div>
+              <p className="text-xl">hello</p>
             </li>
           </ul>
           <i className="text-2xl">Hover to find out more about our values</i>
@@ -124,7 +137,7 @@ const Values = () => {
 
 const Research = () => {
   return (
-    <div className="relative h-[120vh] w-full text-white flex justify-center items-center">
+    <div className="relative md:h-[120vh] h-[165vh] w-full text-white flex justify-center items-center">
       {/* Parallax background */}
 
               {/* Opacity overlay */}
@@ -143,7 +156,7 @@ const Research = () => {
         }}
       ></div>
 
-      <div className="container flex flex-col flex-grow font-light items-center gap-32">
+      <div className="container flex flex-col flex-grow font-light items-center sm:gap-32">
         <h2 className="text-4xl py-8 w-full text-center my-2 z-50">
           Research & Projects
         </h2>
@@ -162,11 +175,11 @@ const Research = () => {
 
 const ResearchCard = () => {
   return (
-    <div className="flex flex-col relative shadow-md bg-slate-500 md:w-[250px] md:h-[360px] w-[200px] h-[300px] rounded-2xl">
+    <div className="flex flex-col relative shadow-md bg-slate-500 lg:w-[250px] lg:h-[360px] sm:w-[200px] sm:h-[300px] w-[150px] h-[250px] rounded-2xl">
       <div className=" flex h-[35%] rounded-t-2xl"></div>
 
       <div className="bg-neutral-200 flex flex-1 rounded-b-xl relative">
-        <div className="md:text-sm text-xs text-neutral-600 m-4 font-normal">
+        <div className="lg:text-sm text-[11px] text-neutral-600 m-4 font-normal">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
           voluptates similique ut incidunt, esse obcaecati doloremque odit atque
           minima dolorem quis delectus iure! Ex necessitatibus officia autem
@@ -193,7 +206,7 @@ const teamMembers = [
 
 const TheTeam = () => {
   return (
-    <div className="h-[140vh] bg-neutral-200 text-neutral-600 w-full flex justify-center items-center relative">
+    <div className="h-[140vh] bg-neutral-200 text-neutral-600 w-full flex justify-center items-center relative border-t border-b border-gray-400">
       <div className="absolute top-0 w-full text-center py-4 mt-14">
         <p className="text-4xl">Meet the Team</p>
       </div>
@@ -226,7 +239,7 @@ const TeamMemberEntry = ({ index, total, member, isCenter }: { index: number; to
         transform: `translate(${x}px, ${y}px)`, // Use translate to position the elements
       }}
     >
-      <div className={`${isCenter ? "h-[200px] w-[200px]" : "h-[150px] w-[150px]"} bg-white rounded-full shadow-md`}></div>
+      <div className={`${isCenter ? "md:h-[200px] md:w-[200px]" : "md:h-[150px] md:w-[150px]"} bg-white rounded-full shadow-md`}></div>
       <div className="flex flex-col items-center">
         <p className={`${member.name === "Kelvin Tuong" ? "text-2xl" : "text-xl"} font-semibold`}>{member.name}</p>
         <p className={`${member.name === "Kelvin Tuong" ? "text-xl" : "text-md"}`}>{member.position}</p>
