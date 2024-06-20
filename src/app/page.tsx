@@ -9,6 +9,8 @@ import { MdScience } from "react-icons/md";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { FaPeopleGroup } from "react-icons/fa6";
 
+import tuonglablogo from  "../../public/lab_logo.pdf-image-000-removebg-preview.png"
+
 export default function Home() {
 
   const screenHeightRef = useRef(null)
@@ -70,13 +72,18 @@ export default function Home() {
 
 const Header = () => {
   return (
-    <div className="container flex justify-around items-center py-[25px] font-light z-50">
-      <ul className="flex gap-6 text-lg">
-        <li className="pr-6 cursor-pointer">logo</li>
-        <li className="cursor-pointer transition-colors duration-150 hover:text-red-400">Vision & Mission</li>
-        <li className="cursor-pointer transition-colors duration-150 hover:text-red-400">Research</li>
-        <li className="cursor-pointer transition-colors duration-150 hover:text-red-400">Team</li>
-        <li className="cursor-pointer transition-colors duration-150 hover:text-red-400">Publications</li>
+    <div className="container flex justify-around items-center py-[25px] font-light z-50 mt-2">
+      <ul className="flex gap-6 text-lg items-center">
+        <Image
+            src={tuonglablogo} // Replace with your image URL
+            alt="Image description"
+            width={70} // Adjust width as needed
+            height={70} // Adjust height as needed
+          />
+        <li className="cursor-pointer transition-colors duration-150 hover:text-amber-400">Vision & Mission</li>
+        <li className="cursor-pointer transition-colors duration-150 hover:text-amber-400 ">Research</li>
+        <li className="cursor-pointer transition-colors duration-150 hover:text-amber-400">Team</li>
+        <li className="cursor-pointer transition-colors duration-150 hover:text-amber-400">Publications</li>
       </ul>
 
       <div className="">
@@ -100,7 +107,7 @@ const Hero = ({ handleScrollToVisionMission }: {
           <button
           onClick={handleScrollToVisionMission}
             className="lg:w-auto w-full inline-block px-4 py-3 rounded-full border border-white text-xl
-              duration-300 hover:bg-white hover:text-black"
+              duration-300 hover:bg-white hover:text-black "
           >
             Learn More
           </button>
@@ -112,39 +119,39 @@ const Hero = ({ handleScrollToVisionMission }: {
 
 const VisionAndMission = () => {
   return (
-    <div className="md:h-[80vh] h-[100vh] w-full text-neutral-600 flex justify-center bg-neutral-200 border-t border-b border-gray-400">
+    <div className="md:h-[80vh] h-[100vh] w-full text-amber-600 flex justify-center bg-neutral-200 border-t border-b border-gray-400">
       <div className="flex flex-col justify-center items-center flex-grow container font-light gap-20">
-        <h2 className="text-4xl py-8 w-full text-center ">Vision & Missions</h2>
+        <h2 className="text-4xl py-8 w-full text-center text-neutral-600">Vision & Missions</h2>
 
         <div className=" flex flex-col items-center md:gap-20 gap-3">
           <h2 className="text-3xl md:w-[55%] w-[85%]">Pioneering child health interventions and solutions through computational immunology analysis, innovative therapies, and early detection methods.</h2>
-          <ul className="flex justify-between md:w-[65%] w-[85%]">
+          <ul className="flex justify-between md:w-[65%] w-[85%] ">
             <li className="flex flex-col items-center justify-center gap-3">
-              <div className="text-4xl rounded-full p-5 shadow-md">
-              <MdScience size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              <div className="text-4xl rounded-full p-5 shadow-md hover:bg-neutral-300 transition-colors duration-300 cursor-pointer">
+              <MdScience size={50} className="cursor-pointer transition-colors duration-300 hover:text-amber-700" />
               </div>
-              <p className="text-md  max-w-[150px] text-center">Study T and B cell receptors</p>
+              <p className="text-md  max-w-[150px] text-center text-neutral-600">Study T and B cell receptors</p>
             </li>
             <li className="flex flex-col items-center justify-center gap-3">
-              <div className="text-4xl rounded-full p-5 shadow-md">
-              <BiCodeAlt size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              <div className="text-4xl rounded-full p-5 shadow-md hover:bg-neutral-300 transition-colors duration-300 cursor-pointer">
+              <BiCodeAlt size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-700" />
               </div>
-              <p className="text-md max-w-[200px] text-center ">Develop single-cell receptor analysis tools</p>
+              <p className="text-md max-w-[200px] text-center text-neutral-600">Develop single-cell receptor analysis tools</p>
             </li>
             <li className="flex flex-col items-center justify-center gap-3">
-              <div className="text-4xl rounded-full p-5 shadow-md">
-              <HiOutlineLightBulb size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              <div className="text-4xl rounded-full p-5 shadow-md hover:bg-neutral-300 transition-colors duration-300 cursor-pointer">
+              <HiOutlineLightBulb size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-700" />
               </div>
-              <p className="text-md max-w-[200px] text-center">Innovate T/B cell response tracking</p>
+              <p className="text-md max-w-[200px] text-center text-neutral-600">Innovate T/B cell response tracking</p>
             </li>
             <li className="flex flex-col items-center justify-center gap-3">
-              <div className="text-4xl rounded-full p-5 shadow-md">
-              <FaPeopleGroup size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-400" />
+              <div className="text-4xl rounded-full p-5 shadow-md hover:bg-neutral-300 transition-colors duration-300 cursor-pointer">
+              <FaPeopleGroup size={50} className="cursor-pointer transition-colors duration-300 hover:text-red-700 " />
               </div>
-              <p className="text-md max-w-[200px] text-center ">Collaborate with IFCCIR and UQ</p>
+              <p className="text-md max-w-[200px] text-center text-neutral-600">Collaborate with IFCCIR and UQ</p>
             </li>
           </ul>
-          <i className="text-2xl">Hover to find out more about our missions</i>
+          <i className="text-2xl text-neutral-600">Hover to find out more about our missions</i>
         </div>
       </div>
     </div>
@@ -187,27 +194,6 @@ const Research = () => {
   );
 };
 
-
-const ResearchCard = () => {
-  return (
-    <div className="flex flex-col relative shadow-md bg-slate-500 lg:w-[300px] lg:h-[440px] sm:w-[200px] sm:h-[300px] w-[150px] h-[250px] rounded-2xl">
-      <div className=" flex h-[35%] rounded-t-2xl"></div>
-
-      <div className="bg-neutral-200 flex flex-1 rounded-b-xl relative">
-        <div className="lg:text-sm text-[11px] text-neutral-600 m-4 font-normal">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          voluptates similique ut incidunt, esse obcaecati doloremque odit atque
-          minima dolorem quis delectus iure! Ex necessitatibus officia autem
-          aliquid neque fugit.
-        </div>
-        <button className="absolute italic bottom-4 right-4 bg-red-700 md:py-2 py-1 px-2 rounded-xl md:text-sm text-xs">
-          Learn More
-        </button>
-      </div>
-    </div>
-  );
-};
-
 import kelvin_pic from "../../public/member-portraits/13353.jpeg"
 import john_pic from "../../public/member-portraits/JohnSaxon.jpg"
 import megan_pic from "../../public/member-portraits/Megan-Headshot.jpg"
@@ -220,17 +206,47 @@ import hiuon_pic from "../../public/member-portraits/HiuonMan.jpg"
 import norman_pic from "../../public/member-portraits/NormanYap.jpg"
 import rohan_pic from "../../public/member-portraits/RohanVandermerwe.jpg"
 
+const ResearchCard = () => {
+  return (
+    <div className="flex flex-col relative shadow-md bg-slate-500 lg:w-[300px] lg:h-[440px] sm:w-[200px] sm:h-[300px] w-[150px] h-[250px] rounded-2xl">
+      <div className="flex h-[35%] rounded-t-2xl relative">
+        <Image
+          src={john_pic}
+          alt="Image description"
+          layout="fill" // This fills the parent container with the image
+          objectFit="cover" // Ensures the image covers the entire area without stretching
+          className="rounded-t-2xl" // Optional: Apply rounded corners to match the container
+        />
+      </div>
+
+      <div className="bg-neutral-200 flex flex-1 rounded-b-xl relative">
+        <div className="lg:text-sm text-[11px] text-neutral-600 m-4 font-normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          voluptates similique ut incidunt, esse obcaecati doloremque odit atque
+          minima dolorem quis delectus iure! Ex necessitatibus officia autem
+          aliquid neque fugit.
+        </div>
+        <button className="absolute italic bottom-4 right-4 bg-amber-600 transition-colors duration-300 hover:bg-amber-800 md:py-3 py-1 px-3 rounded-xl md:text-sm text-xs">
+          Learn More
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
+
 const teamMembers = [
-  { name: "Dr Megan Soon", position: "Postdoctoral Research Fellow", pic: megan_pic },
-  { name: "Mr Amos Choo", position: "Casual Research Assistant", pic: amos_pic},
   { name: "Ms Nicole Gunn", position: "Casual Research Assistant", pic: nicole_pic},
   { name: "Ms Alicia Harasty", position: "Casual Research Assistant", pic: alicia_pic},
   { name: "Charlotte Tsui", position: "UQ MD student (UWEF)", pic:charlotte_pic },
   { name: "John Saxon", position: "UQ MD student (UWEF)", pic:john_pic },
   { name: "Xiaohan Xu", position: "Masters in Bioinformatics" , pic:xiaohan_pic},
+  { name: "Norman Yap", position: "IT (Honours)" , pic: norman_pic},
   { name: "Hiuon Man", position: "Masters in Bioinformatics" , pic:hiuon_pic},
-  { name: "Norman Yap", position: "Bachelor of IT (Honours)" , pic: norman_pic},
-  { name: "Rohan van der Merwe", position: "Bachelor of Biotechnology (Honours)", pic:rohan_pic }
+  { name: "Rohan van der Merwe", position: "Biotechnology (Honours)", pic:rohan_pic },
+  { name: "Dr Megan Soon", position: "Postdoctoral Research Fellow", pic: megan_pic },
+  { name: "Mr Amos Choo", position: "Casual Research Assistant", pic: amos_pic},
 ];
 
 const TheTeam = () => {
@@ -255,7 +271,7 @@ const TheTeam = () => {
 
 const TeamMemberEntry = ({ index, total, member, isCenter }: { index: number; total: number; member: { name: string; position: string; pic: StaticImageData }; isCenter?: boolean }) => {
   const angle = (index / total) * 2 * Math.PI; // Calculate the angle for each item
-  const radius = isCenter ? 0 : 450; // Set radius 0 if it's the center, otherwise use the normal radius
+  const radius = isCenter ? 0 : 410; // Set radius 0 if it's the center, otherwise use the normal radius
   const x = radius * Math.cos(angle); // Calculate x position
   const y = radius * Math.sin(angle); // Calculate y position
 
@@ -268,7 +284,7 @@ const TeamMemberEntry = ({ index, total, member, isCenter }: { index: number; to
         transform: `translate(${x}px, ${y}px)`, // Use translate to position the elements
       }}
     >
-      <div className={`${isCenter ? "md:h-[200px] md:w-[200px]" : "md:h-[120px] md:w-[120px]"} bg-white rounded-full shadow-md`}>
+      <div className={`${isCenter ? "md:h-[200px] md:w-[200px]" : "md:h-[120px] md:w-[120px]"}  rounded-full shadow-lg  `}>
         <Image
           src={member.pic} // Replace with your image URL
           alt="Image description"
